@@ -1,0 +1,7 @@
+experiment,cv_mae,note
+baseline_median,550252,CV zero point (median of train-fold, original price scale)
+deberta_v1_cls_no_centering,659867,lost to baseline (LB 732654); CLS of MLM model is weak -> fixed with mean pooling + centering
+ridge_tfidf_alpha0.5,346772,best single model; CPU ~2 min safety net
+deberta_v2_meanpool_centered,354855,clean run (corrupted fold-2 run: 409370); main transformer
+lgbm_regex_fe,459963,standalone; blend gain vs Ridge ~800 << 30k std = tie, kept for diversity
+blend_simplex_cell5,336815,final OOF blend; old 429k-LB submission kept as fallback

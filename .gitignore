@@ -1,0 +1,15 @@
+# Local artifacts: never commit raw data, weights, or outputs
+*.pth
+*.pt
+*.npz
+*.bin
+checkpoints/
+train_images/
+__pycache__/
+.ipynb_checkpoints/
+.vscode/
+folds.csv
+oof_pred_*.csv
+test_pred_*.csv
+submission_*.csv
+!data_sample/sample_submission.csv
